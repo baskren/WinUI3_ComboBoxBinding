@@ -37,7 +37,6 @@
       <TextBlock Text="PROGRAMMATIC BIND" />
       <TextBlock x:Name="textBlockProg" />
       <ComboBox x:Name="comboBoxProg"  />
-
     </StackPanel>
 
     <StackPanel
