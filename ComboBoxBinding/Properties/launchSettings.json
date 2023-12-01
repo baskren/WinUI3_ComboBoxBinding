@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ComboBoxBinding (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "ComboBoxBinding (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
