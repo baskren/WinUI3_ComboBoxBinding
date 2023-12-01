@@ -20,19 +20,19 @@ public sealed partial class MainPage : Page
     }
     #endregion ViewModel Property
 
-    #region SelectedItem Property
-    public static readonly DependencyProperty SelectedItemProperty = DependencyProperty.Register(
-        nameof(SelectedItem),
+    #region Item Property
+    public static readonly DependencyProperty ItemProperty = DependencyProperty.Register(
+        nameof(Item),
         typeof(object),
         typeof(MainPage),
         new PropertyMetadata(default)
     );
-    public object SelectedItem
+    public object Item
     {
-        get => (object)GetValue(SelectedItemProperty);
-        set => SetValue(SelectedItemProperty, value);
+        get => (object)GetValue(ItemProperty);
+        set => SetValue(ItemProperty, value);
     }
-    #endregion SelectedItem Property
+    #endregion Item Property
 
 
     public MainPage()
@@ -40,14 +40,14 @@ public sealed partial class MainPage : Page
 
         this.InitializeComponent();
 
-        textBlockProg.Bind(TextBlock.TextProperty, this, nameof(SelectedItem));
+        textBlockProg.Bind(TextBlock.TextProperty, this, nameof(Item));
         comboBoxProg.Bind(ComboBox.ItemsSourceProperty, this, nameof(ViewModel));
-        comboBoxProg.Bind(ComboBox.SelectedItemProperty, this, nameof(SelectedItem));
+        comboBoxProg.Bind(ComboBox.SelectedItemProperty, this, nameof(Item));
     }
 
     private void button_Click1(object sender, RoutedEventArgs e)
     {
-        SelectedItem = "A";
+        Item = "A";
     }
 
     private void button_Click2(object sender, RoutedEventArgs e)
@@ -58,7 +58,7 @@ public sealed partial class MainPage : Page
     private void button_Click3(object sender, RoutedEventArgs e)
     {
         ViewModel = null;
-        SelectedItem = null;
+        Item = null;
     }
 
 }

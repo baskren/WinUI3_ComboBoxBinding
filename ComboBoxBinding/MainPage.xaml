@@ -22,9 +22,9 @@
       >
       <TextBlock Text="XML BIND" />
       <TextBlock AutomationProperties.AutomationId="HelloTextBlock"
-          Text="{x:Bind SelectedItem, Mode=OneWay}"
+          Text="{x:Bind Item, Mode=OneWay}"
           HorizontalAlignment="Center" />
-      <ComboBox ItemsSource="{x:Bind ViewModel, Mode=OneWay}" SelectedItem="{x:Bind SelectedItem, Mode=TwoWay}" />
+      <ComboBox ItemsSource="{x:Bind ViewModel, Mode=OneWay}" SelectedItem="{x:Bind Item, Mode=TwoWay}" />
     </StackPanel>
 
     
