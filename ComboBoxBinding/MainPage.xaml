@@ -8,6 +8,7 @@
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="*"/>
       <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="*"/>
     </Grid.ColumnDefinitions>
     <Grid.RowDefinitions>
       <RowDefinition Height="2*" />
@@ -24,7 +25,7 @@
       <TextBlock AutomationProperties.AutomationId="HelloTextBlock"
           Text="{x:Bind Item, Mode=OneWay}"
           HorizontalAlignment="Center" />
-      <ComboBox ItemsSource="{x:Bind ViewModel, Mode=OneWay}" SelectedItem="{x:Bind Item, Mode=TwoWay}" />
+      <ComboBox ItemsSource="{x:Bind ViewModel, Mode=OneWay}" SelectedItem="{x:Bind Item, Mode=OneWay}" />
     </StackPanel>
 
     
@@ -40,6 +41,20 @@
     </StackPanel>
 
     <StackPanel
+      Grid.Column="1"
+      Spacing="10"
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center"
+      >
+        <TextBlock Text="PROGRAMMATIC BIND" />
+        <TextBlock x:Name="textBlockBindOp" />
+        <ComboBox x:Name="comboBoxBindOp"  />
+    </StackPanel>
+
+
+
+
+        <StackPanel
        Grid.Row="1"
        Grid.ColumnSpan="2"
        Spacing="10"

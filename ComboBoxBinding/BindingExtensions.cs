@@ -11,17 +11,19 @@ namespace ComboBoxBinding;
 
 internal static class BindingExtensions
 {
-    public static void Bind(this DependencyObject target, DependencyProperty targetProperty, object source, string path = null)
+    public static void Bind(this DependencyObject target, DependencyProperty targetProperty, object source, string path = null, BindingMode mode = BindingMode.OneWay)
     {
         var binding = new Binding
         {
             Source = source,
-            Mode = BindingMode.OneWay
+            Mode = mode
         };
         if (!string.IsNullOrWhiteSpace(path))
             binding.Path = new PropertyPath(path);
         BindingOperations.SetBinding(target, targetProperty, binding);
     }
+
+
 
 
 }
