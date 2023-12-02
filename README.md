@@ -8,7 +8,7 @@ This app has two combo boxes, both having their `ComboBox.ItemsSource` bound to 
       <TextBlock AutomationProperties.AutomationId="HelloTextBlock"
           Text="{x:Bind Item, Mode=OneWay}"
           HorizontalAlignment="Center" />
-      <ComboBox ItemsSource="{x:Bind ViewModel, Mode=OneWay}" SelectedItem="{x:Bind Item, Mode=TwoWay}" />
+      <ComboBox ItemsSource="{x:Bind ViewModel, Mode=OneWay}" SelectedItem="{x:Bind Item, Mode=OneWay}" />
 ```
 
 ### SECOND COMBO BOX
